@@ -64,19 +64,19 @@ class _HomePageState extends State<HomePage> {
         // ignore: always_specify_types
         actions: [
           Switch(
-              value: x,
-              onChanged: (bool y) {
-                setState(() {
-                  x = !x;
-                });
-              },),
+            value: x,
+            onChanged: (bool y) {
+              setState(() {
+                x = !x;
+              });
+            },),
         ],
       ),
       body: Column(
         children: <Widget>[
           Card(
             child: SizedBox(
-              width: 4000,
+              width: 400,
               height: 200,
               child: DecoratedBox(
                 decoration: const BoxDecoration(color: Colors.black12),
@@ -127,22 +127,26 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           ElevatedButton(
-              child: const Text(
-                'Apasa',
-                style: TextStyle(fontSize: 25),
-              ),
-              onPressed: () {
-                guess();
-                // ignore: inference_failure_on_function_invocation
-                showDialog(
-                    context: context,
-                    builder: (BuildContext context) => AlertDialog(
-                          title: const Text('Gresit'),
-                          content: Text(mesaj),
-                        ),);
-              },)
+            child: const Text(
+              'Apasa',
+              style: TextStyle(fontSize: 25),
+            ),
+            onPressed: () {
+              guess();
+              // ignore: inference_failure_on_function_invocation
+              showDialog(
+                context: context,
+                builder: (BuildContext context) =>
+                    AlertDialog(
+                      title: const Text('Gresit'),
+                      content: Text(mesaj),
+                    ),);
+            },)
         ],
       ),
     );
   }
 }
+
+
+
